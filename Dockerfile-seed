@@ -1,0 +1,5 @@
+FROM mongo:4.2.3
+MAINTAINER jacky
+
+ADD data/inventory.crud.json /
+CMD mongoimport --host mongodb --db test --collection inventory --drop --file inventory.crud.json
